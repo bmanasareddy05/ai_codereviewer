@@ -112,7 +112,7 @@ def footer() -> rx.Component:
             # Bottom row: copyright and status
             rx.hstack(
                 rx.text(
-                    "© 2025 CodeScan.ai — Built with Reflex",
+                    "© 2025 Codereview.ai — Built with Reflex",
                     style={
                         "color": TEXT_DIM,
                         "font_size": "0.75rem",
