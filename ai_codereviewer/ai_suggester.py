@@ -5,7 +5,7 @@ from config import GROQ_API_KEY
 class AISuggester:
     def __init__(self):
         if not GROQ_API_KEY:
-            raise ValueError("GROQ_API_KEY not found. Check your .env file.")
+            raise ValueError("GROQ_API_KEY not found.")
 
         self.model = ChatGroq(
             model_name="llama-3.1-8b-instant",
@@ -18,10 +18,13 @@ class AISuggester:
                 {
                     "role": "system",
                     "content": (
-                        "You are an experienced coding mentor. "
-                        "Provide a concise technical review including "
-                        "time complexity, space complexity, PEP8 naming issues, "
-                        "logical errors, and structural improvements."
+                        "You are a strict code reviewer. "
+                        "Give:\n"
+                        "1. Bugs\n"
+                        "2. Complexity\n"
+                        "3. Code quality issues\n"
+                        "4. Improvements\n"
+                        "Be concise and accurate."
                     )
                 },
                 {
@@ -31,7 +34,6 @@ class AISuggester:
             ]
 
             response = self.model.invoke(messages)
-
             return response.content
 
         except Exception as e:

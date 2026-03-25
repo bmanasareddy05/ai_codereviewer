@@ -18,6 +18,9 @@ class CodeParser:
         return None
 
     def format_code(self):
-        if self.tree:
-            return ast.unparse(self.tree)
-        return None
+        try:
+            if self.tree:
+                return ast.unparse(self.tree)
+            return self.code
+        except Exception:
+            return self.code
