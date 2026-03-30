@@ -59,7 +59,7 @@ def stats_bar() -> rx.Component:
                 orientation="vertical",
                 style={"border_color": BG_BORDER, "height": "48px"},
             ),
-            single_stat("O(n²)", "Max Complexity Flag"),
+            single_stat("O(n³)", "Max Complexity Flag"),
             rx.divider(
                 orientation="vertical",
                 style={"border_color": BG_BORDER, "height": "48px"},
@@ -93,7 +93,7 @@ FEATURES = [
     (
         "🔍",
         "Static Analysis",
-        "Detects unused imports, unused variables, infinite loops, and unreachable code using Python's AST (abstract syntax tree).",
+        "Detects unused imports, unused variables, infinite loops, and unreachable code using Python's AST. C, C++, and Java are reviewed by AI.",
         GREEN,
     ),
     (
@@ -123,7 +123,7 @@ FEATURES = [
     (
         "⚡",
         "Complexity Estimate",
-        "Automatically estimates Big-O time complexity based on your loop structure: O(1), O(n), or O(n²).",
+        "Automatically estimates Big-O time and space complexity per function: O(1), O(log n), O(n), O(n log n), O(n²), or O(n³). Also computes cyclomatic complexity risk.",
         BLUE,
     ),
 ]
@@ -258,7 +258,7 @@ def cta_section() -> rx.Component:
                 },
             ),
             rx.text(
-                "Paste your Python code, hit Analyse, and get a full report in under a second.",
+                "Paste your Python, C, C++, or Java code, hit Analyse, and get a full report in under a second.",
                 style={
                     "color": TEXT_MUTED,
                     "font_size": "0.93rem",

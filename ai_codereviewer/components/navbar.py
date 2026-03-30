@@ -7,7 +7,7 @@ from ai_codereviewer.components.colors import (
 
 def nav_link(label: str, href: str) -> rx.Component:
     # Check if this link matches the current browser path
-    is_active = rx.State.router.page.full_path == href
+    is_active = AppState.router.page.path == href
     
     return rx.link(
         rx.vstack(

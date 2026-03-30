@@ -444,7 +444,7 @@ def chat_input_bar() -> rx.Component:
             value=AppState.chat_input,
             on_change=AppState.set_chat_input,
             placeholder="Ask about your analysis...",
-            on_key_down=lambda e: rx.cond(e == "Enter", AppState.send_chat(), rx.noop()),
+            on_key_down=AppState.send_chat,
             style={
                 "font_family": "monospace",
                 "font_size": "0.82rem",

@@ -29,7 +29,7 @@ def footer_logo() -> rx.Component:
             align="center",
         ),
         rx.text(
-            "AI-powered static analysis and code review for Python.",
+            "AI-powered static analysis and code review for Python, C, C++ and Java.",
             style={
                 "color": TEXT_MUTED,
                 "font_size": "0.82rem",

@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 import reflex as rx
 from ai_codereviewer.pages.home import index as home
 from ai_codereviewer.pages.analyzer import analyser

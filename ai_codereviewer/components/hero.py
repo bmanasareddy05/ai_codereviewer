@@ -81,8 +81,8 @@ def hero_headline() -> rx.Component:
 
 def hero_description() -> rx.Component:
     return rx.text(
-        "Drop your Python code into CodeScan.ai and get instant static analysis, "
-        "AI-powered suggestions, and a quality score — all in seconds.",
+        "Drop your Python, C, C++, or Java code into CodeReview.ai and get instant "
+        "static analysis, AI-powered suggestions, and a quality score — all in seconds.",
         style={
             "color": TEXT_MUTED,
             "font_size": ["0.92rem", "1rem"],
