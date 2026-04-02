@@ -45,7 +45,6 @@ An AI-powered code review web application built with [Reflex](https://reflex.dev
 ```
 AI_CODEREVIEWER/                    ← project root
 │
-├── ai_codereviewer.py              # App entry point — registers all pages
 ├── main.py                         # Reflex main runner
 ├── .env                            # GROQ_API_KEY goes here (never commit this)
 ├── .gitignore
@@ -53,6 +52,7 @@ AI_CODEREVIEWER/                    ← project root
 │
 └── ai_codereviewer/                ← inner package folder
     ├── __init__.py
+    ├── ai_codereviewer.py          # App entry point — registers all pages
     ├── state.py                    # Full app state + all event handlers
     ├── ai_suggester.py             # AI review, chat, and non-Python analysis
     ├── code_parser.py              # AST parse, fix (removes violations), unparse
